@@ -1,3 +1,48 @@
 {
-  "sessions": []
+  "sessions": [
+    {
+      "day": 1,
+      "title": "Interactive Counter Component",
+      "type": "Feature",
+      "difficulty": 2,
+      "concepts": [
+        "React functional components",
+        "useState",
+        "event handlers",
+        "conditional rendering",
+        "props",
+        "parent/child components"
+      ],
+      "time_minutes": 60,
+      "completed": false,
+      "ai_assistance_level": 5,
+      "strengths": [
+        "Understood the intended component/data-flow architecture.",
+        "Could reason about the requirements before knowing the React syntax.",
+        "Identified that the parent should own the counter state."
+      ],
+      "struggles": [
+        "React syntax and JSX structure.",
+        "Hook placement.",
+        "Event handler syntax.",
+        "State updates.",
+        "Declarative React thinking versus imperative DOM manipulation.",
+        "Props/data flow implementation."
+      ],
+      "learned": [
+        "Components are JavaScript functions that return JSX.",
+        "State belongs inside the appropriate component.",
+        "Event handlers receive functions rather than immediately executing them.",
+      ],
+      "reinforce": [
+        "useState",
+        "onClick and event handlers",
+        "Props",
+        "React's declarative rendering model"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "React fundamentals are currently much less familiar than general JavaScript reasoning.",
+      "recurring_strength": "Can reason about program structure and data flow even when the framework syntax is unfamiliar."
+    }
+  ]
 }
