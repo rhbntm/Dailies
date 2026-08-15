@@ -13,9 +13,14 @@
         "props",
         "parent/child components"
       ],
-      "time_minutes": 60,
+      "planning_minutes": null,
+      "implementation_minutes": null,
+      "review_minutes": null,
+      "criteria_accomplished": null,
+      "criteria_total": null,
       "completed": false,
       "ai_assistance_level": 5,
+      "hint_levels_used": [1, 3, 4, 5],
       "strengths": [
         "Understood the intended component/data-flow architecture.",
         "Could reason about the requirements before knowing the React syntax.",
@@ -33,6 +38,8 @@
         "Components are JavaScript functions that return JSX.",
         "State belongs inside the appropriate component.",
         "Event handlers receive functions rather than immediately executing them.",
+        "Parent components can pass state to children through props.",
+        "Updating state causes React to re-render the relevant UI."
       ],
       "reinforce": [
         "useState",
@@ -43,6 +50,56 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "React fundamentals are currently much less familiar than general JavaScript reasoning.",
       "recurring_strength": "Can reason about program structure and data flow even when the framework syntax is unfamiliar."
+    },
+
+    {
+      "day": 2,
+      "title": "Shopping Cart Item Quantity Adjuster",
+      "type": "Feature",
+      "difficulty": 2,
+      "concepts": [
+        "React functional components",
+        "useState",
+        "Event handlers",
+        "Props",
+        "Conditional rendering"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 35,
+      "review_minutes": 20,
+      "criteria_accomplished": 0,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 5,
+      "hint_levels_used": [1, 2, 5],
+      "strengths": [
+        "Recognized that productName and initial quantity should be received as props",
+        "Recognized that quantity modification requires state",
+        "Identified the intended responsibilities of ShoppingCartItem",
+        "Identified the broader reasoning problem after reviewing the failed attempt",
+        "Was able to independently diagnose the weakness in the problem-solving approach after the session"
+      ],
+      "struggles": [
+        "Relational reasoning between concepts, components, and their responsibilities",
+        "Thinking about the overall scope of the challenge before focusing on individual variables and implementation details",
+        "Connecting React concepts together into a coherent component and data-flow model",
+        "Understanding React component rendering versus ordinary function calls"
+      ],
+      "learned": [
+        "The primary difficulty was not understanding individual React concepts, but understanding how they relate to one another within the scope of a challenge",
+        "The overall problem should be understood before reasoning about individual variables or implementation details",
+        "Props, state, event handlers, and components need to be understood relationally rather than as isolated concepts",
+        "The session produced a useful meta-thinking insight about how to approach future coding challenges"
+      ],
+      "reinforce": [
+        "Relational reasoning between programming concepts",
+        "Reading the full problem and identifying its scope before implementation",
+        "Connecting React concepts into a complete component/data-flow model",
+        "Using pseudocode after understanding the relationships between the parts of a problem"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Difficulty reasoning about how individual concepts and components relate to one another before implementation",
+      "recurring_strength": "Able to identify individual concepts and responsibilities, then reflectively diagnose weaknesses in their own problem-solving approach"
     }
   ]
 }
