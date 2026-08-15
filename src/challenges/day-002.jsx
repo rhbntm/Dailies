@@ -34,8 +34,45 @@ function Day002() {
   }
 export default Day002;
 
----
+==================================================
+CHALLENGE
+==================================================
+Day: 2
+Title: Shopping Cart Item Quantity Adjuster
+Type: Feature
+Difficulty: 2
+Estimated Implementation Time: ~35 minutes
 
+Concepts:
+- React functional components
+- `useState`1
+- Event handlers (`onClick`)
+- Props
+- Conditional rendering (disabling buttons)
+
+Why this challenge:
+This challenge directly reinforces concepts identified as struggles in the previous session, including `useState` for managing component-specific data, `onClick` for handling user interactions, and `props` for passing data between parent and child components. It provides a practical context for applying React's declarative rendering model by updating the UI based on state changes.
+
+Task:
+Create a React component named `ShoppingCartItem` that displays a product's name and its current quantity. The component should include buttons to increment and decrement the quantity.
+
+Requirements:
+1. The `ShoppingCartItem` component should accept `productName` and initial `quantity` as props.
+2. The component should display the `productName` and the current `quantity`.
+3. There should be an "Increment" button that increases the quantity by 1 when clicked.
+4. There should be a "Decrement" button that decreases the quantity by 1 when clicked.
+
+Constraints:
+- The quantity must not go below 0. The "Decrement" button should be disabled when the quantity is 0.
+
+Acceptance Criteria:
+1. The `ShoppingCartItem` component renders the `productName` and `quantity` received via props.
+2. Clicking the "Increment" button increases the displayed quantity by one.
+3. Clicking the "Decrement" button decreases the displayed quantity by one.
+4. The "Decrement" button is disabled when the quantity is 0.
+
+Optional Stretch:
+Add a "Remove Item" button that, when clicked, sets the quantity to 0 and disables both increment and decrement buttons.
 ==================================================
 REFLECTION
 ==================================================
