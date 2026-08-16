@@ -100,6 +100,62 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Difficulty reasoning about how individual concepts and components relate to one another before implementation",
       "recurring_strength": "Able to identify individual concepts and responsibilities, then reflectively diagnose weaknesses in their own problem-solving approach"
+    },
+    {
+      "day": 3,
+      "title": "Todo List with Filter",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React functional components",
+        "useState",
+        "React Context",
+        "component responsibilities",
+        "data flow",
+        "props and component composition",
+        "event handling",
+        "conditional rendering",
+        "list rendering",
+        "spread syntax",
+        "derived state"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 25,
+      "review_minutes": 20,
+      "criteria_accomplished": 0,
+      "criteria_total": 5,
+      "completed": false,
+      "ai_assistance_level": 1,
+      "hint_levels_used": [1],
+      "strengths": [
+        "Identified that TodoProvider should own the todo state and todo modification functions.",
+        "Recognized that TodoInput needs access to the functions defined by TodoProvider.",
+        "Recognized the need for a mechanism to establish communication between TodoInput and TodoProvider.",
+        "Recalled the JavaScript spread syntax and connected it conceptually to creating a new array from existing state.",
+        "Used externalizing thoughts in writing to reason through component relationships."
+      ],
+      "struggles": [
+        "Had difficulty clearly defining the role and responsibility of each component.",
+        "Had difficulty mapping the requirement that TodoInput access TodoProvider functions to the applicable React concept.",
+        "Knew React Context conceptually but struggled to identify when and how to apply it to the concrete problem.",
+        "Had difficulty reasoning about relationships between variables and components when given a clear set of requirements."
+      ],
+      "learned": [
+        "React Context can establish communication between components when one component needs access to state or functions owned by another provider.",
+        "TodoProvider owns the todo state and operations while TodoInput owns the input interaction.",
+        "Context itself is not a component; it provides a communication mechanism that a provider supplies values through and consumers access.",
+        "React state arrays should be updated by producing a new array rather than mutating the existing array."
+      ],
+      "reinforce": [
+        "React Context: createContext, Provider, and useContext.",
+        "Reasoning from requirements to component responsibilities.",
+        "Identifying which component owns state and which components need to consume or modify it.",
+        "Mapping concrete problems to applicable React concepts.",
+        "Derived state and filtering."
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Difficulty reasoning about relationships between components, variables, and concepts when working from explicit requirements.",
+      "recurring_strength": "Able to identify conceptual relationships and connect ideas when reasoning freely, especially after externalizing thoughts."
     }
   ]
 }

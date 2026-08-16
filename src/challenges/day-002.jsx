@@ -37,6 +37,7 @@ export default Day002;
 ==================================================
 CHALLENGE
 ==================================================
+
 Day: 2
 Title: Shopping Cart Item Quantity Adjuster
 Type: Feature
