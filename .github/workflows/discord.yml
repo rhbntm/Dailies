@@ -17,11 +17,11 @@ jobs:
           BRANCH: ${{ github.ref_name }}
           ACTOR: ${{ github.actor }}
           SHA: ${{ github.sha }}
-          COMMIT: ${{ github.event.head_commit.message }}
-          COMMIT_URL: ${{ github.event.head_commit.url }}
-          ADDED: ${{ toJson(github.event.head_commit.added) }}
-          MODIFIED: ${{ toJson(github.event.head_commit.modified) }}
-          REMOVED: ${{ toJson(github.event.head_commit.removed) }}
+          COMMIT: ${{ github.event.head_commit.message || 'No commit message' }}
+          COMMIT_URL: ${{ github.event.head_commit.url || '' }}
+          ADDED: ${{ toJson(github.event.head_commit.added || []) }}
+          MODIFIED: ${{ toJson(github.event.head_commit.modified || []) }}
+          REMOVED: ${{ toJson(github.event.head_commit.removed || []) }}
 
         run: |
           python - <<'PY'
@@ -31,7 +31,10 @@ jobs:
 
           def get_files(name):
               try:
-                  return json.loads(os.environ.get(name, "[]"))
+                  value = os.environ.get(name, "[]")
+                  if value.lower() == "null":
+                      return []
+                  return json.loads(value)
               except:
                   return []
 
@@ -72,7 +75,7 @@ jobs:
                               "value": changes_text[:1024]
                           }
                       ],
-                      "url": os.environ["COMMIT_URL"]
+                      "url": os.environ.get("COMMIT_URL", "")
                   }
               ]
           }
