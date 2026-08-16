@@ -20,6 +20,7 @@ jobs:
           import json
           import os
           import urllib.request
+          import urllib.error
 
           event = json.loads(os.environ["EVENT_JSON"])
           commit = event.get("head_commit") or {}
@@ -92,7 +93,13 @@ jobs:
               },
               method="POST"
           )
+          try:
+              with urllib.request.urlopen(request) as response:
+                  print(f"Discord response: {response.status}")
+                  print(response.read().decode())
+          except urllib.error.HTTPError as e:
+              print(f"Discord HTTP error: {e.code}")
+              print(e.read().decode())
+              raise
 
-          with urllib.request.urlopen(request) as response:
-              print(f"Discord response: {response.status}")
           PY
