@@ -13,15 +13,7 @@ jobs:
       - name: Send push to Discord
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          REPO: ${{ github.repository }}
-          BRANCH: ${{ github.ref_name }}
-          ACTOR: ${{ github.actor }}
-          SHA: ${{ github.sha }}
-          COMMIT: ${{ github.event.head_commit.message || 'No commit message' }}
-          COMMIT_URL: ${{ github.event.head_commit.url || '' }}
-          ADDED: ${{ toJson(github.event.head_commit.added || []) }}
-          MODIFIED: ${{ toJson(github.event.head_commit.modified || []) }}
-          REMOVED: ${{ toJson(github.event.head_commit.removed || []) }}
+          EVENT_JSON: ${{ toJson(github.event) }}
 
         run: |
           python - <<'PY'
@@ -29,18 +21,21 @@ jobs:
           import os
           import urllib.request
 
-          def get_files(name):
-              try:
-                  value = os.environ.get(name, "[]")
-                  if value.lower() == "null":
-                      return []
-                  return json.loads(value)
-              except:
-                  return []
+          event = json.loads(os.environ["EVENT_JSON"])
+          commit = event.get("head_commit") or {}
 
-          added = get_files("ADDED")
-          modified = get_files("MODIFIED")
-          removed = get_files("REMOVED")
+          repo = event.get("repository") or {}
+          repo_name = repo.get("full_name", "Unknown repository")
+
+          branch = event.get("ref", "").replace("refs/heads/", "")
+          actor = (event.get("sender") or {}).get("login", "Unknown")
+          sha = event.get("after", "")
+          commit_message = commit.get("message", "No commit message")
+          commit_url = commit.get("url", "")
+
+          added = commit.get("added") or []
+          modified = commit.get("modified") or []
+          removed = commit.get("removed") or []
 
           changes = []
 
@@ -58,24 +53,31 @@ jobs:
           if not changes_text:
               changes_text = "No file changes listed."
 
+          # Discord embed field has a 1024-character limit.
+          if len(changes_text) > 1024:
+              changes_text = changes_text[:1000] + "\n…"
+
+          # Only show the first line of the commit message.
+          commit_title = commit_message.splitlines()[0] if commit_message else "No commit message"
+
           payload = {
               "embeds": [
                   {
-                      "title": f"🟢 {os.environ['REPO'].split('/')[-1]}",
+                      "title": f"🟢 {repo_name.split('/')[-1]}",
                       "description": (
-                          f"**{os.environ['COMMIT'].splitlines()[0]}**\n\n"
-                          f"`{os.environ['BRANCH']}` · "
-                          f"`{os.environ['SHA'][:7]}` · "
-                          f"**{os.environ['ACTOR']}**"
+                          f"**{commit_title}**\n\n"
+                          f"`{branch}` · "
+                          f"`{sha[:7]}` · "
+                          f"**{actor}**"
                       ),
                       "color": 0x57F287,
                       "fields": [
                           {
                               "name": "Changes",
-                              "value": changes_text[:1024]
+                              "value": changes_text
                           }
                       ],
-                      "url": os.environ.get("COMMIT_URL", "")
+                      "url": commit_url
                   }
               ]
           }
