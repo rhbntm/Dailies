@@ -1,0 +1,93 @@
+name: Discord Push Notification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send push to Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+          SHA: ${{ github.sha }}
+          COMMIT: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
+          ADDED: ${{ toJson(github.event.head_commit.added) }}
+          MODIFIED: ${{ toJson(github.event.head_commit.modified) }}
+          REMOVED: ${{ toJson(github.event.head_commit.removed) }}
+
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          def get_files(name):
+              try:
+                  return json.loads(os.environ.get(name, "[]"))
+              except:
+                  return []
+
+          added = get_files("ADDED")
+          modified = get_files("MODIFIED")
+          removed = get_files("REMOVED")
+
+          changes = []
+
+          for file in added:
+              changes.append(f"🟢 `{file}`")
+
+          for file in modified:
+              changes.append(f"🟡 `{file}`")
+
+          for file in removed:
+              changes.append(f"🔴 `{file}`")
+
+          changes_text = "\n".join(changes)
+
+          if not changes_text:
+              changes_text = "No file changes listed."
+
+          payload = {
+              "embeds": [
+                  {
+                      "title": f"🟢 {os.environ['REPO'].split('/')[-1]}",
+                      "description": (
+                          f"**{os.environ['COMMIT'].splitlines()[0]}**\n\n"
+                          f"`{os.environ['BRANCH']}` · "
+                          f"`{os.environ['SHA'][:7]}` · "
+                          f"**{os.environ['ACTOR']}**"
+                      ),
+                      "color": 0x57F287,
+                      "fields": [
+                          {
+                              "name": "Changes",
+                              "value": changes_text[:1024]
+                          }
+                      ],
+                      "url": os.environ["COMMIT_URL"]
+                  }
+              ]
+          }
+
+          data = json.dumps(payload).encode("utf-8")
+
+          request = urllib.request.Request(
+              os.environ["WEBHOOK"],
+              data=data,
+              headers={
+                  "Content-Type": "application/json"
+              },
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request) as response:
+              print(f"Discord response: {response.status}")
+          PY
