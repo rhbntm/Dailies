@@ -156,6 +156,57 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Difficulty reasoning about relationships between components, variables, and concepts when working from explicit requirements.",
       "recurring_strength": "Able to identify conceptual relationships and connect ideas when reasoning freely, especially after externalizing thoughts."
+    },
+    {
+    "day": 4,
+    "title": "Broken Theme Toggle Debugging",
+    "type": "Debugging",
+    "difficulty": 3,
+    "concepts": [
+    "React Context",
+    "createContext",
+    "Context Provider",
+    "useContext",
+    "useState",
+    "object destructuring",
+    "children prop",
+    "component composition",
+    "Context-based data flow"
+    ],
+    "planning_minutes": 5,
+    "implementation_minutes": 28,
+    "review_minutes": null,
+    "criteria_accomplished": 5,
+    "criteria_total": 5,
+    "completed": true,
+    "ai_assistance_level": 0,
+    "hint_levels_used": [],
+    "strengths": [
+    "Successfully diagnosed and fixed the broken theme toggle",
+    "Completed the optional Footer stretch independently",
+    "Was able to trace the basic state-to-consumer Context data flow",
+    "Investigated unfamiliar React syntax after completing the challenge"
+    ],
+    "struggles": [
+    "Reverse engineering unfamiliar JSX syntax such as <ThemeProvider>{children}</ThemeProvider>",
+    "Applying object destructuring in an actual coding environment despite having previously learned the concept",
+    "Distinguishing the ThemeProvider component from ThemeContext.Provider"
+    ],
+    "learned": [
+    "The Context Provider must expose every value or function that consumers need",
+    "ThemeProvider is a custom component that internally uses ThemeContext.Provider",
+    "The children prop contains the React elements placed inside a component",
+    "Object destructuring extracts properties from the props object"
+    ],
+    "reinforce": [
+    "Object destructuring in practical code",
+    "React Context Provider and consumer relationships",
+    "Understanding component composition and children"
+    ],
+    "recommended_difficulty": "same",
+    "recurring_weakness": "Relational reasoning: understanding how concepts, components, and pieces of a system connect to one another",
+    "recurring_strength": "Conceptual understanding improves when investigating the relationships between code elements after attempting a problem independently"
     }
+
   ]
 }
