@@ -158,55 +158,101 @@
       "recurring_strength": "Able to identify conceptual relationships and connect ideas when reasoning freely, especially after externalizing thoughts."
     },
     {
-    "day": 4,
-    "title": "Broken Theme Toggle Debugging",
-    "type": "Debugging",
-    "difficulty": 3,
-    "concepts": [
-    "React Context",
-    "createContext",
-    "Context Provider",
-    "useContext",
-    "useState",
-    "object destructuring",
-    "children prop",
-    "component composition",
-    "Context-based data flow"
-    ],
-    "planning_minutes": 5,
-    "implementation_minutes": 28,
-    "review_minutes": null,
-    "criteria_accomplished": 5,
-    "criteria_total": 5,
-    "completed": true,
-    "ai_assistance_level": 0,
-    "hint_levels_used": [],
-    "strengths": [
-    "Successfully diagnosed and fixed the broken theme toggle",
-    "Completed the optional Footer stretch independently",
-    "Was able to trace the basic state-to-consumer Context data flow",
-    "Investigated unfamiliar React syntax after completing the challenge"
-    ],
-    "struggles": [
-    "Reverse engineering unfamiliar JSX syntax such as <ThemeProvider>{children}</ThemeProvider>",
-    "Applying object destructuring in an actual coding environment despite having previously learned the concept",
-    "Distinguishing the ThemeProvider component from ThemeContext.Provider"
-    ],
-    "learned": [
-    "The Context Provider must expose every value or function that consumers need",
-    "ThemeProvider is a custom component that internally uses ThemeContext.Provider",
-    "The children prop contains the React elements placed inside a component",
-    "Object destructuring extracts properties from the props object"
-    ],
-    "reinforce": [
-    "Object destructuring in practical code",
-    "React Context Provider and consumer relationships",
-    "Understanding component composition and children"
-    ],
-    "recommended_difficulty": "same",
-    "recurring_weakness": "Relational reasoning: understanding how concepts, components, and pieces of a system connect to one another",
-    "recurring_strength": "Conceptual understanding improves when investigating the relationships between code elements after attempting a problem independently"
+      "day": 4,
+      "title": "Broken Theme Toggle Debugging",
+      "type": "Debugging",
+      "difficulty": 3,
+      "concepts": [
+        "React Context",
+        "createContext",
+        "Context Provider",
+        "useContext",
+        "useState",
+        "object destructuring",
+        "children prop",
+        "component composition",
+        "Context-based data flow"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 28,
+      "review_minutes": 20,
+      "criteria_accomplished": 5,
+      "criteria_total": 5,
+      "completed": true,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Successfully diagnosed and fixed the broken theme toggle",
+        "Completed the optional Footer stretch independently",
+        "Was able to trace the basic state-to-consumer Context data flow",
+        "Investigated unfamiliar React syntax after completing the challenge"
+      ],
+      "struggles": [
+        "Reverse engineering unfamiliar JSX syntax such as <ThemeProvider>{children}</ThemeProvider>",
+        "Applying object destructuring in an actual coding environment despite having previously learned the concept",
+        "Distinguishing the ThemeProvider component from ThemeContext.Provider"
+      ],
+      "learned": [
+        "The Context Provider must expose every value or function that consumers need",
+        "ThemeProvider is a custom component that internally uses ThemeContext.Provider",
+        "The children prop contains the React elements placed inside a component",
+        "Object destructuring extracts properties from the props object"
+      ],
+      "reinforce": [
+        "Object destructuring in practical code",
+        "React Context Provider and consumer relationships",
+        "Understanding component composition and children"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning: understanding how concepts, components, and pieces of a system connect to one another",
+      "recurring_strength": "Conceptual understanding improves when investigating the relationships between code elements after attempting a problem independently"
+    },
+    {
+      "day": 5,
+      "title": "Dynamic Welcome Message",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React functional components",
+        "useState",
+        "props",
+        "Conditional rendering",
+        "Event handlers",
+        "Object destructuring",
+        "Controlled inputs"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 25,
+      "review_minutes": 15,
+      "criteria_accomplished": 0,
+      "criteria_total": 5,
+      "completed": false,
+      "ai_assistance_level": 2,
+      "hint_levels_used": [2],
+      "strengths": [
+        "Understood the conceptual data flow between props, state, input, event handling, and rendered output.",
+        "Correctly recognized that initialName should determine the initial displayed name.",
+        "Developed a clearer understanding of object destructuring and the difference between accessing a whole props object and extracting a property."
+      ],
+      "struggles": [
+        "Did not know the React syntax for accessing and tracking an input element's value.",
+        "Initially attempted to access input.value without having a reference to the input element.",
+        "Initially confused the event handler parameter with the component's name state."
+      ],
+      "learned": [
+        "A prop can be destructured from the props object using function parameter destructuring.",
+        "A whole props object can be accessed through property notation, while destructuring extracts selected properties.",
+        "An input value can be stored in React state so it can be accessed elsewhere in the component."
+      ],
+      "reinforce": [
+        "React controlled inputs",
+        "Input event handling",
+        "Object destructuring",
+        "Props versus component state"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning and judging how concepts connect to one another",
+      "recurring_strength": "Understanding conceptual relationships between React concepts"
     }
-
   ]
 }
