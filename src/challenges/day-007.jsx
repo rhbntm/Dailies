@@ -1,19 +1,48 @@
-# Placeholder for daily challenges
+/*
+import { useState } from "react"
 
-This file contains the active challenge for the current session.
+export default function Day007() {
+  const [password, setPassword] = useState("");
+  const passwordStrength = 0;
+// first approach(wrong)
+  // // check for strong password
+  // function passwordChecker() {
+  //   if (password.length >= 8) {
+  //     passwordStrength += 1
+  //   }
+  //   if (password.test()) {
+  //     passwordStrength += 1
+  //   }
+  //   return
+  // }
 
-Historical challenge records live in `src/challenges/`.
-Structured progression data lives in `practice-log.json`.
+  function handleChange(event) {
+    setPassword(() => password.event.value.target)
+    return
+  }
 
----
 
-## Day 7 Challenge
+    return (
+      <div>
+        <input placeholder="Type password" type="password" value={password} onChange={handleChange}></input>
+        <p>{passwordStrength <= 1 ? "Weak" : passwordStrength <= 3 ? "Medium" : "Strong"} Password</p>
 
-**Day:** 7  
-**Title:** Password Strength Meter  
-**Type:** Feature  
-**Difficulty:** 3  
-**Estimated Implementation Time:** ~25 minutes  
+
+        <button >Submit</button>
+      </div>
+  )
+  }
+}
+
+==================================================
+CHALLENGE
+==================================================
+
+**Day:** 7
+**Title:** Password Strength Meter
+**Type:** Feature
+**Difficulty:** 3
+**Estimated Implementation Time:** ~25 minutes
 
 **Concepts:**
 - React functional components
@@ -81,3 +110,33 @@ Build a password input with a real-time strength meter and requirement checklist
 ### Optional Stretch:
 
 Add a "Show/Hide Password" toggle button that switches the input between `type="password"` and `type="text"` without losing the current value or breaking the real-time feedback.
+
+==================================================
+REFLECTION
+==================================================
+
+What I learned:
+-Regex can be used to check whether a string contains certain character types, such as uppercase letters, numbers, and special characters.
+-React state updates trigger a re-render, where derived values can be recalculated from the updated state.
+
+What I struggled with:
+
+ Understanding how to use regex and .test() correctly.
+ Translating the four password requirements into individual boolean checks.
+ Connecting the four requirement checks into a single strength value.
+ Understanding the exact structure of the event object when getting the input value.
+ Initially trying to calculate and mutate passwordStrength inside the event handler instead of deriving it from state.
+
+What I figured out without AI:
+-None 
+
+What I would do differently next time:
+-Spend more time planning the data flow before writing the implementation.
+-Break the problem into the four individual requirement checks before thinking about the final strength calculation.
+-Research and practice regex separately before trying to incorporate it into a larger React problem.
+-Write down what each variable represents before deciding whether it should be state or a derived value.
+
+Important insight:
+-I can understand individual concepts like useState, controlled inputs, regex, and derived state, but I still struggle to connect multiple concepts into one working data flow. The important pattern I need to practice is input → state → derived values → UI.
+-Today's performance was relatively weaker compared to other days but it happens. Keep going.
+*/

@@ -253,6 +253,107 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning and judging how concepts connect to one another",
       "recurring_strength": "Understanding conceptual relationships between React concepts"
+    },
+    {
+      "day": 6,
+      "title": "Filterable Name List",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "useState",
+        "Event handling",
+        "Derived state",
+        "Array filtering",
+        "String includes",
+        "Case-insensitive string comparison",
+        "List rendering",
+        "Props and component composition",
+        "Object destructuring"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 35,
+      "review_minutes": 10,
+      "criteria_accomplished": 0,
+      "criteria_total": 5,
+      "completed": false,
+      "ai_assistance_level": 2,
+      "hint_levels_used": [2],
+      "strengths": [
+        "Correctly initialized the controlled input state as an empty string.",
+        "Identified that the input state represents the user's filter text.",
+        "Independently recognized that filtering should involve checking each name against the input text.",
+        "Independently recognized that the boolean result should determine whether the current name is retained."
+      ],
+      "struggles": [
+        "Translating the filtering requirement into a concrete algorithm.",
+        "Initially overcomplicating the problem by thinking about iterating through individual characters.",
+        "Keeping track of the challenge requirements while focusing on the filtering mechanism.",
+        "Connecting the event handler, input state, filtering logic, and rendered output."
+      ],
+      "learned": [
+        "Controlled inputs need an initial value of the appropriate type.",
+        "An input's state can represent filter criteria rather than the content that is ultimately rendered.",
+        "includes() can determine whether a name contains the user's search text."
+      ],
+      "reinforce": [
+        "Connecting input events to state updates.",
+        "Translating filtering requirements into concrete algorithms.",
+        "Derived state and filtering arrays for rendering.",
+        "Maintaining awareness of acceptance criteria while implementing."
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning between inputs, state, event handlers, and downstream rendered output.",
+      "recurring_strength": null
+    },
+    {
+      "day": 7,
+      "title": "Password Strength Meter",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "useState",
+        "event handlers",
+        "derived state",
+        "conditional rendering",
+        "string methods",
+        "regular expressions"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 35,
+      "review_minutes": 10,
+      "criteria_accomplished": 0,
+      "criteria_total": 6,
+      "completed": false,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Recognized that handleChange should update the password state",
+        "Recognized that password strength should be derived rather than stored in state",
+        "Understood that the strength depends on the number of passed requirements"
+      ],
+      "struggles": [
+        "Using regular expressions and .test() correctly",
+        "Accessing the input value from the event object",
+        "Translating requirements into boolean checks",
+        "Connecting multiple requirement checks into one strength value",
+        "Understanding the timing of React state updates"
+      ],
+      "learned": [
+        "Regex can check whether a string contains character types such as uppercase letters, numbers, and special characters",
+        "React state updates trigger a re-render where derived values can be recalculated",
+        "The intended data flow is input → state → derived values → UI"
+      ],
+      "reinforce": [
+        "Regular expressions and regex.test()",
+        "Controlled input event handling",
+        "Derived values from React state",
+        "Relational reasoning across multiple derived values"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning: connecting input → state → derived values → UI across multiple dependent pieces of logic",
+      "recurring_strength": "Recognizing and reasoning about component responsibilities and data flow at a conceptual level"
     }
   ]
 }

@@ -4,6 +4,7 @@
 // import Day004 from "./challenges/day-004/day004";
 // import Day005 from "./challenges/day-005";
 // import Day006 from "./challenges/day-006";
+import Day007 from "./challenges/day-007";
 
 function App() {
   // return <Day001 />;
@@ -12,6 +13,7 @@ function App() {
   // return <Day004 />
   // return <Day005 />
   // return <Day006 />
+  return <Day007 />
 }
 
 export default App;
