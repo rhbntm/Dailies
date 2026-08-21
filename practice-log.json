@@ -354,6 +354,54 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning: connecting input → state → derived values → UI across multiple dependent pieces of logic",
       "recurring_strength": "Recognizing and reasoning about component responsibilities and data flow at a conceptual level"
+    },
+    {
+      "day": 8,
+      "title": "Toggleable Password Visibility",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "useState",
+        "Event handling",
+        "Conditional rendering",
+        "React input type attribute",
+        "Relational reasoning between component state and UI elements"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 45,
+      "review_minutes": 30,
+      "criteria_accomplished": 0,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 1,
+      "hint_levels_used": [1],
+      "strengths": [
+        "Correctly separated checkbox visibility state from password string state.",
+        "Correctly understood that isChecked represents a boolean checkbox state.",
+        "Correctly recognized that event.target refers to the element that triggered the event.",
+        "Independently researched JSX dynamic attributes."
+      ],
+      "struggles": [
+        "Connecting checkbox state to the password input's type attribute.",
+        "Connecting each input's event handler to the correct piece of state.",
+        "Understanding the relational flow between UI element, event, state, and rendered property."
+      ],
+      "learned": [
+        "Different pieces of input data should have separate state variables.",
+        "A boolean visibility state should not be used as the password input's string value.",
+        "event.target refers to the element that generated the event.",
+        "JSX attributes can depend on JavaScript expressions."
+      ],
+      "reinforce": [
+        "Controlled inputs",
+        "Event-to-state relationships",
+        "Dynamic JSX attributes",
+        "Relational reasoning between state and UI"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning between UI elements, events, state, and rendered behavior",
+      "recurring_strength": "Identifying and separating distinct pieces of component state"
     }
   ]
 }
