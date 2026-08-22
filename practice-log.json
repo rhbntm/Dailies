@@ -402,6 +402,51 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning between UI elements, events, state, and rendered behavior",
       "recurring_strength": "Identifying and separating distinct pieces of component state"
+    },
+    {
+      "day": 9,
+      "title": "Character Counter Input",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "useState",
+        "Event handling",
+        "Derived state",
+        "Conditional rendering"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 33,
+      "review_minutes": 15,
+      "criteria_accomplished": 4,
+      "criteria_total": 4,
+      "completed": true,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Implemented a controlled input using React state",
+        "Derived character count and remaining allowance from input state without redundant state",
+        "Recognized and corrected the initial approach of blocking input beyond the limit",
+        "Implemented conditional rendering for the exceeded-limit warning"
+      ],
+      "struggles": [
+        "Initially interpreted the character limit as something that should prevent input beyond 20 characters",
+        "Needed clarification on what it means to derive character count metrics from input state"
+      ],
+      "learned": [
+        "The input text can serve as the single source of truth while character count, remaining allowance, and warning status are derived from it",
+        "Conditional rendering can represent a derived condition directly in JSX",
+        "A validation requirement can differ from preventing the invalid input entirely"
+      ],
+      "reinforce": [
+        "Derived state",
+        "Conditional rendering",
+        "Reasoning from state changes to downstream UI output",
+        "Testing boundary conditions"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning between user input events, React state, and derived UI output",
+      "recurring_strength": "Understanding and applying React state as a source of truth"
     }
   ]
 }
