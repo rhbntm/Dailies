@@ -1,10 +1,44 @@
-# Placeholder for daily challenges
+/*
+import { useState } from "react";
 
-This file contains the active challenge for the current session.
+function ShippingCalculator() {
+  const [quantity, setQuantity] = useState(0);
+  let subtotalPrice = quantity * 20;
+  let finalPrice = subtotalPrice + 5;
+  function handleChange(e) {
+      setQuantity(() => e.target.value)
+  }
 
-Historical challenge records live in `src/challenges/`.
-Structured progression data lives in `practice-log.json`.
----
+  // function isFree() {
+  //   finalPrice = subtotalPrice;
+  // }
+  return (
+    <div>
+      <input
+        type="number"
+        value={quantity}
+        onChange={handleChange}
+      />
+      <p>Subtotal Price is: { e.target.value > 0 ? "Invalid": subtotalPrice }</p>
+      <p>Shipping Fee Price is: { 5 }</p>
+      <p>Total Fee Price is: { finalPrice >= 50 ? subtotalPrice: finalPrice }</p>
+    </div>
+  );
+}
+
+function Day010() {
+  return (
+    <div>
+      <ShippingCalculator />
+    </div>
+  );
+}
+
+export default Day010;
+
+==================================================
+CHALLENGE
+==================================================
 
 Day: 10
 Title: Shipping Calculator
@@ -49,3 +83,31 @@ Acceptance Criteria:
 
 Optional Stretch:
 Add an "Express Delivery" toggle option (e.g., checkbox) that adds $10 to the shipping fee regardless of subtotal, recalculating the total dynamically.
+
+==================================================
+REFLECTION
+==================================================
+
+What I learned:
+- The difference between derived state and React state.
+- Derived values can be calculated during render instead of being stored as separate state.
+
+What I struggled with:
+- How to use state derivation to directly calculate the total prices.
+- How to correctly use the quantity state from the input during the render phase (JSX).
+- Handling invalid, empty, and negative input values.
+
+What I figured out without AI:
+- Some of the requirements in the challenge.
+- How to store the input quantity in state and derive the subtotal from it.
+- That the calculated prices do not need their own state.
+
+What I would do differently next time:
+- I'd say research more if I want to finish the challenge, but the fact that I'm struggling on my own is good too if I don't care about finishing the challenge and merely want to learn.
+- I could spend more time breaking the requirements into smaller relationships before implementing them.
+
+Important insight:
+- Struggling to solve the challenge independently can still be valuable even when I don't finish it.
+- If my goal is specifically to complete the challenge, however, I should be more willing to research the concepts I'm stuck on rather than remaining stuck indefinitely.
+
+*/

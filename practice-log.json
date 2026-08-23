@@ -447,6 +447,52 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning between user input events, React state, and derived UI output",
       "recurring_strength": "Understanding and applying React state as a source of truth"
+    },
+    {
+      "day": 10,
+      "title": "Shipping Calculator",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "useState",
+        "Event handling",
+        "Derived state and calculations",
+        "Conditional rendering"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 45,
+      "review_minutes": 10,
+      "criteria_accomplished": 1,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Stored the input quantity in React state.",
+        "Derived the subtotal from the quantity state.",
+        "Recognized that calculated prices should not need separate React state."
+      ],
+      "struggles": [
+        "Using derived state to calculate the total prices.",
+        "Correctly using the quantity state during the render phase.",
+        "Handling invalid, empty, and negative input values.",
+        "Translating the free-shipping rule into the correct conditional calculations."
+      ],
+      "learned": [
+        "The difference between React state and derived values.",
+        "Derived values can be calculated during render instead of stored as separate state.",
+        "Input values from an HTML input need to be handled carefully before being used in calculations."
+      ],
+      "reinforce": [
+        "Derived state",
+        "Controlled numeric inputs",
+        "Input validation and normalization",
+        "Conditional calculations"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning between input state, derived values, and conditional UI remains an area needing practice.",
+      "recurring_strength": "Controlled inputs and deriving basic values from state are becoming established strengths."
     }
   ]
 }
