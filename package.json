@@ -25,5 +25,53 @@
     "globals": "^17.7.0",
     "vite": "^8.2.0",
     "vitest": "^4.1.10"
+  },
+  {
+  "day": 11,
+  "title": "Event Ticket Calculator",
+  "type": "Feature",
+  "difficulty": 3,
+  "concepts": [
+  "React controlled numeric inputs",
+  "useState",
+  "Event handling",
+  "Derived state and calculations",
+  "Input validation and normalization",
+  "Conditional rendering and messaging"
+  ],
+  "planning_minutes": 5,
+  "implementation_minutes": 25,
+  "review_minutes": null,
+  "criteria_accomplished": 1,
+  "criteria_total": 4,
+  "completed": false,
+  "ai_assistance_level": 0,
+  "hint_levels_used": [],
+  "strengths": [
+  "Implemented controlled inputs using useState",
+  "Derived subtotal directly from state",
+  "Implemented the basic conditional discount calculation without AI"
+  ],
+  "struggles": [
+  "Handling empty, invalid, and negative numeric input values",
+  "Remembering that HTML input values come through as strings",
+  "Getting the discount threshold condition exactly right",
+  "Prioritizing functionality over CSS within the available time"
+  ],
+  "learned": [
+  "Calculated values such as subtotal and final total should be derived during render rather than stored in state",
+  "Input values should be normalized before being used in calculations",
+  "The input to state to normalized value to derived calculation to UI pattern is important for handling user input"
+  ],
+  "reinforce": [
+  "Numeric input normalization and validation",
+  "Handling empty and invalid input values",
+  "Boundary conditions in conditional calculations",
+  "Derived state"
+  ],
+  "recommended_difficulty": "same",
+  "recurring_weakness": "Translating user input into normalized values before using those values in derived calculations",
+  "recurring_strength": "Understanding and applying the input to state to derived value to UI relationship"
   }
+
 }
