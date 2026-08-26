@@ -583,6 +583,52 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Numeric input normalization and validation remain an unstable area across recent challenges.",
       "recurring_strength": "Consistently improving at identifying and deriving values from React state rather than storing redundant calculated state."
+    },
+    {
+      "day": 13,
+      "title": "Equipment Rental Calculator",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "Numeric string-to-number normalization",
+        "Input validation",
+        "Derived calculations",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 60,
+      "review_minutes": 25,
+      "criteria_accomplished": 1,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Used React state as the source of truth for rental days and express delivery.",
+        "Kept calculated pricing values out of React state.",
+        "Recognized the discount and express surcharge as independent conditions.",
+        "Independently figured out almost all of the validation criteria."
+      ],
+      "struggles": [
+        "Validating empty, non-numeric, zero, negative, and other invalid numeric inputs.",
+        "Understanding the difference between the ternary operator and && for conditional rendering.",
+        "Knowing when and how to apply && for conditional rendering.",
+        "Distinguishing the discount amount from the amount remaining after the discount."
+      ],
+      "learned": [
+        "The && operator can conditionally render content when only a true condition needs to produce an output.",
+        "Ternaries and && serve different conditional-rendering purposes.",
+        "Input validation requires reasoning about which values the application should accept."
+      ],
+      "reinforce": [
+        "Numeric input normalization and validation.",
+        "Conditional rendering with && versus ternary.",
+        "Derived pricing calculations involving discounts and surcharges."
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Numeric input normalization and validation has appeared as a recurring difficulty across recent calculator challenges.",
+      "recurring_strength": "Consistently using React state for user inputs while deriving calculated values instead of storing redundant state."
     }
   ]
 }
