@@ -629,6 +629,51 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Numeric input normalization and validation has appeared as a recurring difficulty across recent calculator challenges.",
       "recurring_strength": "Consistently using React state for user inputs while deriving calculated values instead of storing redundant state."
+    },
+    {
+      "day": 14,
+      "title": "T-Shirt Order Calculator",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "Numeric string-to-number normalization",
+        "Input validation",
+        "Derived state and calculations",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 65,
+      "review_minutes": 15,
+      "criteria_accomplished": 4,
+      "criteria_total": 4,
+      "completed": true,
+      "ai_assistance_level": 2,
+      "hint_levels_used": [2],
+      "strengths": [
+        "Applied input normalization to a controlled numeric input",
+        "Derived calculations instead of storing them in React state",
+        "Handled multiple validation conditions and conditional error messaging",
+        "Applied the bulk discount and custom-print fee independently"
+      ],
+      "struggles": [
+        "Proper naming conventions",
+        "Ensuring validation covers all required invalid inputs",
+        "Calculating the final price correctly"
+      ],
+      "learned": [
+        "Input normalization",
+        "A more readable approach to error handling"
+      ],
+      "reinforce": [
+        "Input validation",
+        "Numeric string-to-number normalization",
+        "Derived calculations",
+        "Understanding the behavior of && when used outside conditional rendering"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Input validation and recognizing when controlled input values need normalization",
+      "recurring_strength": "Deriving calculated values from state rather than storing redundant state"
     }
   ]
 }
