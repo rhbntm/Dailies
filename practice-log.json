@@ -674,6 +674,54 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Input validation and recognizing when controlled input values need normalization",
       "recurring_strength": "Deriving calculated values from state rather than storing redundant state"
+    },
+    {
+      "day": 15,
+      "title": "Workshop Registration Fee Calculator",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "Numeric string-to-number normalization",
+        "Input validation",
+        "Derived state and calculations",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 45,
+      "review_minutes": null,
+      "criteria_accomplished": 3,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 1,
+      "hint_levels_used": [1],
+      "strengths": [
+        "Implemented controlled inputs and state management independently",
+        "Normalized numeric input before calculations",
+        "Derived subtotal and discount values instead of storing calculated state",
+        "Correctly applied the group discount before the early-bird discount",
+        "Maintained daily coding practice despite having limited time"
+      ],
+      "struggles": [
+        "Limited time due to spending part of the day learning cybersecurity and working on the challenge late in the evening",
+        "Completing all validation requirements within the available time",
+        "Making error messages accurately match validation rules",
+        "Consistently using normalized numeric values"
+      ],
+      "learned": [
+        "Reinforced the input to validation to derived calculation to UI pattern",
+        "Reinforced that calculation order matters when applying multiple discounts",
+        "Reinforced keeping calculated values out of React state",
+        "An incomplete challenge can still be a productive practice session"
+      ],
+      "reinforce": [
+        "Input validation and error handling",
+        "Consistent numeric normalization",
+        "Checking implementation against requirements before finishing"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Input validation and normalization",
+      "recurring_strength": "Deriving calculated values from React state rather than storing them separately"
     }
   ]
 }
