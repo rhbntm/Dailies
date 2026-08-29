@@ -722,6 +722,52 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Input validation and normalization",
       "recurring_strength": "Deriving calculated values from React state rather than storing them separately"
+    },
+    {
+      "day": 16,
+      "title": "Event Ticket Cost Calculator",
+      "type": "Feature",
+      "difficulty": 3,
+      "concepts": [
+        "React controlled inputs",
+        "Numeric string-to-number normalization",
+        "Input validation and error handling",
+        "Derived calculations",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 35,
+      "review_minutes": 10,
+      "criteria_accomplished": 4,
+      "criteria_total": 4,
+      "completed": true,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Controlled React state and input handling",
+        "Deriving calculations directly from state",
+        "Implementing validation and conditional rendering",
+        "Recognizing and correcting issues after diagnostic feedback"
+      ],
+      "struggles": [
+        "Validation condition ordering, particularly with NaN",
+        "Consistently using normalized values for numeric comparisons",
+        "Matching conditional UI exactly to business rules",
+        "Boundary-case testing"
+      ],
+      "learned": [
+        "Validation condition order matters when handling NaN and numeric input",
+        "Normalized values should be used consistently for numeric comparisons",
+        "Conditional UI should reflect whether a rule actually applies, rather than displaying zero-value line items"
+      ],
+      "reinforce": [
+        "Input validation patterns",
+        "Boundary-condition testing",
+        "Normalization and validation flow"
+      ],
+      "recommended_difficulty": "higher",
+      "recurring_weakness": "Input validation and edge-case handling",
+      "recurring_strength": "Deriving calculated values directly from state"
     }
   ]
 }
