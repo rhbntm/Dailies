@@ -768,6 +768,52 @@
       "recommended_difficulty": "higher",
       "recurring_weakness": "Input validation and edge-case handling",
       "recurring_strength": "Deriving calculated values directly from state"
+    },
+    {
+      "day": 17,
+      "title": "Co-Working Desk Booking Calculator",
+      "type": "Feature",
+      "difficulty": 4,
+      "concepts": [
+        "React controlled inputs",
+        "Dropdown select handling",
+        "Numeric string-to-number normalization",
+        "Boundary validation",
+        "Object lookup with bracket notation",
+        "Derived state and calculation logic",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 70,
+      "review_minutes": 10,
+      "criteria_accomplished": 4,
+      "criteria_total": 4,
+      "completed": true,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Created an object to represent multiple desk tier prices",
+        "Connected the selected dropdown value to the pricing logic",
+        "Used derived values instead of storing calculated pricing in state",
+        "Implemented the required duration validation and pricing rules"
+      ],
+      "struggles": [
+        "Connecting HTML dropdown values to React event handlers and application logic",
+        "Accessing object values dynamically using the selected desk tier"
+      ],
+      "learned": [
+        "Dropdown selections can be accessed through e.target.value",
+        "A selected value can be used as a dynamic key for object lookup"
+      ],
+      "reinforce": [
+        "Controlled select inputs",
+        "Dynamic object property access",
+        "Input validation and normalization",
+        "Relating input state to derived calculations"
+      ],
+      "recommended_difficulty": "higher",
+      "recurring_weakness": "Input normalization and validation continue to require deliberate reasoning across calculator challenges.",
+      "recurring_strength": "Deriving values from React state and connecting input state to calculation logic."
     }
   ]
 }
