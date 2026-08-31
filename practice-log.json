@@ -814,6 +814,53 @@
       "recommended_difficulty": "higher",
       "recurring_weakness": "Input normalization and validation continue to require deliberate reasoning across calculator challenges.",
       "recurring_strength": "Deriving values from React state and connecting input state to calculation logic."
+    },
+    {
+      "day": 18,
+      "title": "Dynamic Order Builder & Cart Calculator",
+      "type": "Feature",
+      "difficulty": 6,
+      "concepts": [
+        "Array state management in React",
+        "Controlled form inputs",
+        "Object lookup",
+        "Dynamic array operations",
+        "Derived state"
+      ],
+      "planning_minutes": 5,
+      "implementation_minutes": 60,
+      "review_minutes": 15,
+      "criteria_accomplished": 1,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 1,
+      "hint_levels_used": [1],
+      "strengths": [
+        "Successfully connected controlled form inputs to React state.",
+        "Correctly reasoned through the dropdown value versus price lookup problem.",
+        "Successfully created an order object with a calculated subtotal.",
+        "Used console logging to investigate behavior before seeking further help."
+      ],
+      "struggles": [
+        "Connecting the selected menu item and quantity to the order-building function.",
+        "Understanding how to store order objects inside a React array state.",
+        "Uncertainty about array methods for removing specific items.",
+        "Understanding duplicate handling and array-based cart operations."
+      ],
+      "learned": [
+        "The basic flow from controlled inputs to state, function logic, and a calculated object.",
+        "The challenge requires thinking in terms of arrays of objects rather than individual scalar values.",
+        "Getting stuck and reasoning through unfamiliar problems is a valuable part of the practice process."
+      ],
+      "reinforce": [
+        "React array state updates.",
+        "JavaScript array methods such as map, filter, and reduce.",
+        "Working with arrays of objects.",
+        "Connecting input state to state transformations."
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning when connecting input values, state, derived values, and UI behavior.",
+      "recurring_strength": "Willingness to investigate and reason through implementation problems independently before requesting assistance."
     }
   ]
 }
