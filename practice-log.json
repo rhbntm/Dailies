@@ -861,6 +861,51 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning when connecting input values, state, derived values, and UI behavior.",
       "recurring_strength": "Willingness to investigate and reason through implementation problems independently before requesting assistance."
+    },
+    {
+      "day": 19,
+      "title": "Equipment Rental Builder & Total Calculator",
+      "type": "Feature",
+      "difficulty": 6,
+      "concepts": [
+        "Array state management in React",
+        "Controlled form inputs",
+        "String-to-number normalization",
+        "Input validation",
+        "Array of objects",
+        "Derived state"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 25,
+      "review_minutes": null,
+      "criteria_accomplished": 1,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Controlled input state",
+        "String-to-number normalization",
+        "Basic quantity validation",
+        "Equipment price lookup object"
+      ],
+      "struggles": [
+        "Managing and updating an array of objects in React state",
+        "Connecting equipment selection, pricing, quantity, and the equipment list",
+        "Maintaining focus during a more difficult challenge while mentally tired"
+      ],
+      "learned": [
+        "Array state differs from managing individual scalar values in React",
+        "Form inputs, normalization, and validation need to connect before updating application data"
+      ],
+      "reinforce": [
+        "Updating arrays of objects in React state",
+        "Distinguishing stored state from derived values",
+        "Relational reasoning between state, user actions, and derived UI"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning when connecting multiple pieces of state and derived data",
+      "recurring_strength": "Working with controlled inputs and explicit input normalization and validation"
     }
   ]
 }
