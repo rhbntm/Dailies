@@ -906,6 +906,54 @@
       "recommended_difficulty": "same",
       "recurring_weakness": "Relational reasoning when connecting multiple pieces of state and derived data",
       "recurring_strength": "Working with controlled inputs and explicit input normalization and validation"
+    },
+    {
+      "day": 20,
+      "title": "Conference Workshop Pass Manager",
+      "type": "Feature",
+      "difficulty": 5,
+      "concepts": [
+        "Array state management in React",
+        "Controlled form inputs",
+        "String-to-number normalization",
+        "Form validation",
+        "Dynamic array operations",
+        "Derived state",
+        "Conditional rendering"
+      ],
+      "planning_minutes": null,
+      "implementation_minutes": 30,
+      "review_minutes": null,
+      "criteria_accomplished": 1,
+      "criteria_total": 4,
+      "completed": false,
+      "ai_assistance_level": 0,
+      "hint_levels_used": [],
+      "strengths": [
+        "Separating form state from array state",
+        "Creating controlled inputs",
+        "Explicitly normalizing input strings to numbers",
+        "Recognizing the difference between stored state and derived values"
+      ],
+      "struggles": [
+        "Connecting input values to immutable array-of-object state updates",
+        "Reasoning about dynamic array operations",
+        "Coordinating validation logic with user feedback"
+      ],
+      "learned": [
+        "Dynamic array operations can be used to meet the requirements of managing, updating, and removing items",
+        "The typical pattern of controlled inputs flowing into normalized and validated state updates needs reinforcement"
+      ],
+      "reinforce": [
+        "Array operations on arrays of objects",
+        "Checking whether an item exists before adding or updating it",
+        "Immutable array state updates",
+        "Deriving totals from array state",
+        "Validation logic and error conditions"
+      ],
+      "recommended_difficulty": "same",
+      "recurring_weakness": "Relational reasoning when connecting input values, state updates, derived values, and UI output",
+      "recurring_strength": "Identifying and practicing the distinction between controlled form state and derived values"
     }
   ]
 }
